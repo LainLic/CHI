@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Htmx Demo</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    
+
+</head>
+<body class="bg-gray-200">
+    <h1 class=" text-center text-6xl p-11">Chi Htmx Demo</h1>
+
+    <div class="main h-dvh p-32 border">
+        
+        <div class="flex justify-around  mb-3">
+            <button class="text-xl border border-dark rounded-md shadow hover:shadow-2xl  px-4 py-1 " hx-get="/user-info" hx-target="#user-info" hx-swap="innerHTML">
+                Content 1
+            </button>
+            <button class="text-xl border border-dark rounded-md shadow hover:shadow-2xl  px-4 py-1 " hx-get="/user-info" hx-target="#user-info" hx-swap="innerHTML">
+                Content 2
+            </button>
+            <button class="text-xl border border-dark rounded-md  shadow hover:shadow-2xl  px-4 py-1 " hx-get="/user-info" hx-target="#user-info" hx-swap="innerHTML">
+                Content 3
+            </button>
+        </div>
+        <div class="text-center justify-center border border-black rounded-lg h-[50dvh] "  id="user-info">
+            <p>Dynamic Content</p>
+        </div>
+    </div>
+</body>
+</html>
